@@ -1,5 +1,5 @@
 import { HardhatUserConfig } from "hardhat/config";
-import "@nomicfoundation/hardhat-toolbox";
+import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
 const config: HardhatUserConfig = {
     solidity: {
@@ -12,17 +12,17 @@ const config: HardhatUserConfig = {
         }
     },
     networks: {
-        // ±¾µØ Hardhat ÍøÂç
+        // æœ¬åœ° Hardhat ç½‘ç»œ
         localhost: {
             url: "http://127.0.0.1:8545",
             chainId: 31337
         },
-        // Ganache ÅäÖÃ - ¸ù¾İÄúµÄ Ganache ÉèÖÃµ÷Õû
+        // Ganache é…ç½® - æ ¹æ®æ‚¨çš„ Ganache è®¾ç½®è°ƒæ•´
         ganache: {
-            url: "http://127.0.0.1:8545", // Ganache GUI Ä¬ÈÏ¶Ë¿Ú
+            url: "http://127.0.0.1:8545", // Ganache GUI é»˜è®¤ç«¯å£
             chainId: 1337,
             accounts: [
-                "0x13ad822197d06d52eebb97729dc6dd4c14610db54b1c56b18088f9618b923948" // ¿ÉÑ¡£¬Èç¹ûĞèÒªÌØ¶¨ÕË»§
+                "0x13ad822197d06d52eebb97729dc6dd4c14610db54b1c56b18088f9618b923948" // å¯é€‰ï¼Œå¦‚æœéœ€è¦ç‰¹å®šè´¦æˆ·
             ]
         }
     },
